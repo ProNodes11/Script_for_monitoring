@@ -5,9 +5,10 @@ read name
 
 nohup docker logs infernet-node -f --tail 100 > logs.log &
 
-sudo tee /root/config.yaml <<"EOF"
+sudo tee /root/config.yaml << EOF 
 
-server:  http_listen_port: 9080
+server:  
+  http_listen_port: 9080
   grpc_listen_port: 9095
 
 positions:
